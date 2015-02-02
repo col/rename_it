@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+require_relative '../src/rename_it.rb'
+
+if ARGV.length == 4
+  RenameIt.new(ARGV[0], ARGV[1], ARGV[2], ARGV[3]).run
+elsif ARGV.length == 2
+  RenameIt.new(ARGV[0], ARGV[1]).run
+else
+  puts "Usage: rename_it <src_dir> <dest_dir> [<find value> <replacement value>]"
+end 
